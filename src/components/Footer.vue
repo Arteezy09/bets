@@ -70,28 +70,29 @@
   top: -10%;
   left: -10%;
 }
+
 .btn1{
   background: #f1f1f1;
   color: #3498db;
 }
-
 .btn1:hover i{
   color: #f1f1f1;
 }
 .btn1::before{
   background: #3498db;
 }
+
 .btn2{
   background: #f1f1f1;
   color: #FBC02D;
 }
-
 .btn2:hover i{
   color: #f1f1f1;
 }
 .btn2::before{
   background: #FBC02D;
 }
+
 .btn3{
   background: #f1f1f1;
   color: #1976D2;
@@ -102,6 +103,7 @@
 .btn3::before{
   background: #1976D2;
 }
+
 .btn4{
   background: #f1f1f1;
   color: #8E24AA;
@@ -112,6 +114,7 @@
 .btn4::before{
   background: #8E24AA;
 }
+
 .btn5{
   background: #f1f1f1;
   color: #D32F2F;
@@ -122,6 +125,7 @@
 .btn5::before{
   background: #D32F2F;
 }
+
 .btn6{
   background: #f1f1f1;
   color: #000000;
