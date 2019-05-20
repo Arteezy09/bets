@@ -11,18 +11,12 @@
 <script>
 import Toolbar from './components/Toolbar'
 import Footer from './components/Footer'
-
 export default {
   components: { 
     Toolbar, 
     Footer 
   },
-  name: 'App',
-  data () {
-    return {
-      
-    }
-  }
+  name: 'App'
 }
 </script>
 

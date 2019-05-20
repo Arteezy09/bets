@@ -61,6 +61,7 @@
 import db from '@/fb'
 
 export default {
+  props: ['vid'],
   data() {
     return {
       projects: [],
@@ -84,7 +85,7 @@ export default {
     }
   },
   created() {
-    db.collection('projects').onSnapshot(res => {
+    db.collection('projects').where('vidsporta', '==', this.vid).onSnapshot(res => {
       const changes = res.docChanges();
       changes.forEach(change => {
         if (change.type === 'added') {

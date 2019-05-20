@@ -1,6 +1,6 @@
 <template>
   <v-dialog max-width="600px" v-model="dialog" persistent>
-    <v-btn flat slot="activator" class="secondary">Добавить прогноз</v-btn>
+    <v-btn flat slot="activator" class="secondary" small round>Добавить прогноз</v-btn>
     <v-card>
       <v-card-title>
         <h2 class="ml-3">Новый прогноз</h2>
@@ -13,11 +13,10 @@
           <v-text-field v-model="koefficient" label="Коэффициент" :rules="inputRules" clearable outline></v-text-field>
           <v-select v-model="vidsporta" :items="items" label="Вид спорта" outline :rules="inputRules"></v-select>   
           <v-text-field v-model="time" label="Время матча" :rules="inputRules" clearable outline></v-text-field>
-
           <v-spacer></v-spacer>
-
-          <v-btn small flat @click="cancel" class="secondary mt-5">Отмена</v-btn>
-          <v-btn small flat @click="submit" class="secondary mt-5 ml-2" :loading="loading">Принять</v-btn>
+          <v-btn small flat @click="cancel" class="secondary mt-3">Отмена</v-btn>
+          <v-btn small flat @click="submit" class="secondary mt-3 ml-2" :loading="loading">Принять</v-btn>
+          <h4 v-if="loading" class="mt-2 ml-3">Запись сейчас отключена</h4>
         </v-form>
       </v-card-text>
     </v-card>
@@ -26,7 +25,6 @@
 
 <script>
 import db from '@/fb'
-
 export default {
   data() {
     return {
@@ -73,6 +71,7 @@ export default {
     },
     cancel() {
       this.dialog = false
+      this.loading = false
     }
   }
 }
